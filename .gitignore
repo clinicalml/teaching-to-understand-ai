@@ -1,0 +1,7 @@
+*.p
+*.pyc
+*.xml
+.idea
+data
+.ipynb_checkpoints
+*/.ipynb_checkpoints

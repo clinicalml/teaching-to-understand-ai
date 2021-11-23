@@ -1,7 +1,41 @@
 # Teaching Humans When To Defer to a Classifier via Examplars
 
-This repository includes the code  and experiments  for our [paper Teaching Humans When To Defer to a Classifier via Examplars]() by Hussein Mozannar, Arvind Satyanarayan and David Sontag.
+This repository includes the code  and experiments  for our [paper Teaching Humans When To Defer to a Classifier via Examplars](https://arxiv.org/abs/2111.11297) by Hussein Mozannar, Arvind Satyanarayan and David Sontag.
 
+
+**This repository is currently being expanded.**
+
+
+The use of our algorithm is pretty simple:
+
+```python
+from teaching import TeacherExplainer
+# prepare data
+teacher = TeacherExplainer(data_x, data_y, human_predictions, AI_predictions, prior_rejector, kernel, metric_y, alpha, number_teaching_points)
+teaching_x, teaching_gammas, teaching_labels, teaching_indices = teacher.get_teaching_examples()
+```
+
+Refer to the source [teaching.py](teaching.py) for the correct specification of the arguments and outputs which should be:
+
+```
+Args:
+    data_x: 2d numpy array of the features
+    data_y: 1d numpy array of labels
+    human_predictions:  1d array of the human predictions 
+    AI_predictions:  1d array of the AI predictions 
+    prior_rejector: 1d binary array of the human prior rejector preds 
+    kernel: function that takes as input two inputs and returns a positive number, plays the role of K(.,.)
+    metric_y: metric function (positive, the higher the better) between predictions and ground truths, must behave like rbf_kernel from sklearn
+    alpha: parameter of selection algorithm, 0 for double greedy and 1 for consistent radius
+    number_teaching_points: number of teaching points to return
+Returns:
+    teaching_x: 2d numpy array of teaching points features
+    teaching_indices: indices of the teaching points in self.data_x
+    teaching_gammas: 1d numpy of gamma values used
+    teaching_labels: 1d array of deferral labels where 1 signifies defer to AI and 0 signifies don't defer to AI
+```
+
+For an example usage please the following [notebook](test_teaching.ipynb)
 
 Quick Links:
 * [CIFAR](cifar/README.md)
@@ -28,5 +62,12 @@ This repository contains multiple jupyter notebooks
 
 
 ```
-
+@misc{mozannar2021teaching,
+      title={Teaching Humans When To Defer to a Classifier via Examplars}, 
+      author={Hussein Mozannar and Arvind Satyanarayan and David Sontag},
+      year={2021},
+      eprint={2111.11297},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```

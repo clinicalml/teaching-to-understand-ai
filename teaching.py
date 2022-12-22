@@ -200,8 +200,8 @@ class TeacherExplainer():
                     continue
                 so_far += 1
                 idx = int(sorted_sim[j][1])
-                score_hum = self.metric_y([self.data_y[j]], [self.hum_preds[j]])
-                score_ai = self.metric_y([self.data_y[j]], [self.ai_preds[j]])
+                score_hum = self.metric_y([self.data_y[idx]], [self.hum_preds[idx]])
+                score_ai = self.metric_y([self.data_y[idx]], [self.ai_preds[idx]])
                 if self.opt_defer[i] == 1:
                     if current_defer_preds[idx] == 0:
                         current_improve += score_ai - score_hum

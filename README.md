@@ -1,5 +1,9 @@
 # Teaching Humans When To Defer to a Classifier via Examplars
 
+**New**: 
+You may be interested in our new paper which tackles the same problem [Effective Human-AI Teams via Learned Natural Language Rules and Onboarding](https://arxiv.org/abs/2311.01007)   published in NeurIPS 2023 (spotlight) with improved code [https://github.com/clinicalml/onboarding_human_ai](https://github.com/clinicalml/onboarding_human_ai)
+
+
 This repository includes the code  and experiments  for our [paper Teaching Humans When To Defer to a Classifier via Examplars](https://arxiv.org/abs/2111.11297) by Hussein Mozannar, Arvind Satyanarayan and David Sontag.
 
 

@@ -1,0 +1,22 @@
+cluster 2: plants
+cluster 3: singers, musicians
+cluster 4: movies, actors,
+cluster 5: cars, computers (unclear)
+clutster 6: actors, films
+cluster 7: actors, writers, innovators (unclear)
+cluster 8: casions, hotels, sites
+cluster 9: novelists, writers, magazines
+cluster 10: actresses, singer, film (unclear)
+cluster 11: composers, pianists, plays
+cluster 12: games, films
+cluster 14: universities, city
+cluster 15: tennis, racing, olympics, football (broad sports)
+cluster 16: companies, billionaires, personalities (unclear)
+cluster 17: soccer players
+cluster 18: albums
+cluster 20: artists, books (unclear)
+cluster 22: shows, actors
+cluster 23: basketball, football, baseball (broad sports)
+cluster 24: politicians
+
+clusters in user study: 2,3,4,8,9,11,12,14,17,23,24
